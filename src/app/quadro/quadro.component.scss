@@ -41,49 +41,14 @@
         padding-right: 30px;  
        
     }
-    .open-close-container1 {
-        text-align: center;
-        font-family: consolas;
-        position:relative;
-        img{
-            position: relative;
-            left:30%;
-            height: 400px;
-            width: 400px;
-        }
-      }
 
-      .open-close-container2 {
+      .open-close-container {
         text-align: center;
         font-family: consolas;
         position:relative;
         img{
             position: relative;
-            left:-30%;
-            height: 400px;
-            width: 400px;
-        }
-      }
-
-      .open-close-container3 {
-        text-align: center;
-        font-family: consolas;
-        position:relative;
-        img{
-            position: relative;
-            left:35%;
-            height: 400px;
-            width: 400px;
-        }
-      }
-
-      .open-close-container4 {
-        text-align: center;
-        font-family: consolas;
-        position:relative;
-        img{
-            position: relative;
-            left:-40%;
+            //left:-40%;
             height: 400px;
             width: 400px;
         }
@@ -95,20 +60,4 @@ app-quadrado {
     height: 100px;
     font-family: consolas;
 }
-/*
-.open-close-container {
-    text-align: center;
-    font-family: consolas;
 
-    //border: 1px solid #dddddd;
-    //margin-top: 1em;
-    //padding: 20px 20px 0px 20px;
-    //color: #000000;
-    img{
-        position: relative;
-        top:60%;
-        height: 500px;
-        width: 500px;
-    }
-  }*/
-  

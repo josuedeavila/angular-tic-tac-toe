@@ -1,26 +1,18 @@
-<div *ngIf="vencedor!=null" class= "item">
-    <div   class="open-close-container1">
-        <img src="../../assets/pngguru.png">
-    </div>
-</div>
-<div >
+
+
     <div class="item">
         <app-personagens
         (X) = "getX($event)"
         (O) = "getO($event)"
         (j) = "Jogo()"></app-personagens>
     </div>
-</div>
+
 
 <div *ngIf="aux==true">
     <div class="item">
         <h1>Quem vai vencer essa batalha?</h1>
     </div>
-    <div *ngIf="vencedor!=null" class= "item">
-        <div   class="open-close-container2">
-            <img src="../../assets/pngguru.png">
-        </div>
-    </div>
+
 
     <div class="item">
         <img src="{{ jogadorX.thumbnail.path}}.{{ jogadorX.thumbnail.extension }}">
@@ -30,11 +22,7 @@
     <div class="item">
         <h1 class="placar">{{ Xvenceu }} - {{ Ovenceu }}</h1>
     </div>
-    <div *ngIf="vencedor!=null" class= "item">
-        <div   class="open-close-container3">
-            <img src="../../assets/pngguru.png">
-        </div>
-    </div>
+
 
     <div class="item">
         <h2 *ngIf = "vencedor == null && velha<9 && player=='X'">{{ jogadorX.name}} é sua vez!</h2>
@@ -46,12 +34,12 @@
 
 
     <div *ngIf="vencedor!=null" class= "item">
-        <div   class="open-close-container4">
+        <div   class="open-close-container">
             <img src="../../assets/pngguru.png">
         </div>
     </div>
 
-        <div  class="item">
+        <div *ngIf="vencedor==null" class="item">
             <main>
                 <app-quadrado
                 *ngFor="let val of quadrado; let i = index"
@@ -60,9 +48,6 @@
                 </app-quadrado>
             </main>
         </div>
-
-
-
 
     <div class="item">
         <button class = "botao" (click)="toggle()" (click)="newGame()">Novo Jogo</button>
