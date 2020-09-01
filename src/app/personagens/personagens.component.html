@@ -1,0 +1,65 @@
+<div *ngIf="jogar==false">
+    <div class="item">
+        <div>
+            <h1 *ngIf="escolha==false">Escolham seus personagens!</h1>
+        </div>
+        <div>
+            <h1 *ngIf="escolha==true">Personagens escolhidos!</h1>
+        </div>
+    </div>
+    <div class="item">
+        <div >
+            <h2>PLAYER 1 - X</h2>
+        </div>
+        
+        <div *ngIf="escolha==false" class="busca">
+            <input class="form-control" type="text" name="search" #searchTerm  (keyup)="searchTerm.value.length ? getJogadorX(searchTerm.value) : getPersonagens()" >
+        </div>
+
+
+        <div  class="circle">
+            <img  *ngIf = "jogadorX!=''" src="{{ jogadorX[0].thumbnail.path }}.{{ jogadorX[0].thumbnail.extension }}">
+        </div>
+        <div *ngIf = "jogadorX==''">
+            <br><br><br><br><br>
+        </div>
+
+        <div *ngIf="escolha==true">
+            <h3>{{ jogadorX[0].name }}</h3>
+        </div>
+    </div>
+    <br><br>
+    <div class="item">
+        <div >
+            <h2>PLAYER 2 - O</h2>
+        </div>
+
+        <div *ngIf="escolha==false && jogadorX!=''" class="busca">
+            <input  class="form-control" type="text" name="search" #searchTop  (keyup)="searchTop.value.length ? getJogadorO(searchTop.value) : getPersonagens()" >
+        </div>
+
+    
+        <div *ngIf="jogadorO!=''"  class="circle">
+            <img src="{{ jogadorO[0].thumbnail.path }}.{{ jogadorO[0].thumbnail.extension }}">
+        </div>
+        <div *ngIf = "jogadorO==''">
+            <br><br><br><br><br>
+        </div>
+
+        <div *ngIf="escolha==true">
+            <h3>{{ jogadorO[0].name }}</h3>
+        </div>
+    </div>
+
+    <div *ngIf="escolha==false"class="item">
+        <button class = "botao" (click)="confirmarEscolha()">Confirmar</button>
+    </div>
+
+    <div *ngIf="escolha==true"class="item">
+        <button class = "botao" (click)="iniciarJogo()">Jogar</button>
+    </div>
+</div>
+    
+
+
+

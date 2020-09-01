@@ -1,0 +1,48 @@
+img{
+    height: 100px;
+    width: 100px;
+
+    border-radius: 50%;
+    //padding-left:30px;
+    //padding-right: 30px;       
+}
+
+.busca{
+    padding:20px;
+    .form-control{ 
+        height: 30px;
+        width:300px;
+
+        font-size:20px;
+        font-family: consolas;
+    }
+}
+
+.item {
+    
+    text-align: center;
+    font-family: consolas;
+
+    .placar{
+        word-spacing: 45px;
+    }
+    
+    .botao{
+        margin-top:30px;
+        margin-bottom:10px;
+        font-family: consolas;
+        font-size: 20px;
+
+        width: 304px;
+        height: 50px;
+        vertical-align: bottom;
+        position: relative;
+
+        outline: none;
+        border-radius:15px;
+        
+
+    }
+}
+
+

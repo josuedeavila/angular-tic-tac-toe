@@ -1,0 +1,74 @@
+<div *ngIf="vencedor!=null" class= "item">
+    <div   class="open-close-container1">
+        <img src="../../assets/pngguru.png">
+    </div>
+</div>
+<div >
+    <div class="item">
+        <app-personagens
+        (X) = "getX($event)"
+        (O) = "getO($event)"
+        (j) = "Jogo()"></app-personagens>
+    </div>
+</div>
+
+<div *ngIf="aux==true">
+    <div class="item">
+        <h1>Quem vai vencer essa batalha?</h1>
+    </div>
+    <div *ngIf="vencedor!=null" class= "item">
+        <div   class="open-close-container2">
+            <img src="../../assets/pngguru.png">
+        </div>
+    </div>
+
+    <div class="item">
+        <img src="{{ jogadorX.thumbnail.path}}.{{ jogadorX.thumbnail.extension }}">
+        <img src="{{ jogadorO.thumbnail.path }}.{{ jogadorO.thumbnail.extension }}">
+    </div>
+
+    <div class="item">
+        <h1 class="placar">{{ Xvenceu }} - {{ Ovenceu }}</h1>
+    </div>
+    <div *ngIf="vencedor!=null" class= "item">
+        <div   class="open-close-container3">
+            <img src="../../assets/pngguru.png">
+        </div>
+    </div>
+
+    <div class="item">
+        <h2 *ngIf = "vencedor == null && velha<9 && player=='X'">{{ jogadorX.name}} é sua vez!</h2>
+        <h2 *ngIf = "vencedor == null && velha<9 && player=='O'">{{ jogadorO.name}} é sua vez!</h2>
+        <h2 *ngIf = "vencedor =='X'"> {{ jogadorX.name }} é o vencedor!</h2>
+        <h2 *ngIf = "vencedor =='O'"> {{ jogadorO.name }} é o vencedor!</h2>
+        <h2 *ngIf = "velha==9"> Vish! Deu velha.</h2>
+    </div>
+
+
+    <div *ngIf="vencedor!=null" class= "item">
+        <div   class="open-close-container4">
+            <img src="../../assets/pngguru.png">
+        </div>
+    </div>
+
+        <div  class="item">
+            <main>
+                <app-quadrado
+                *ngFor="let val of quadrado; let i = index"
+                [value]="val"
+                (click)="makeMove(i)">
+                </app-quadrado>
+            </main>
+        </div>
+
+
+
+
+    <div class="item">
+        <button class = "botao" (click)="toggle()" (click)="newGame()">Novo Jogo</button>
+    </div>
+
+
+
+</div>
+
