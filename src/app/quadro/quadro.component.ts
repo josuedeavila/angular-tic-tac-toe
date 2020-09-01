@@ -1,12 +1,5 @@
 import { Component, OnInit, HostBinding} from '@angular/core';
 import { MarvelService } from '../marvel.service'
-import {
-  trigger,
-  state,
-  style,
-  animate,
-  transition,
-} from '@angular/animations';
 
 @Component({
   selector: 'app-quadro',
