@@ -12,26 +12,7 @@ import {
   selector: 'app-quadro',
   templateUrl: './quadro.component.html',
   styleUrls: ['./quadro.component.scss'],
-  providers: [MarvelService],
-  animations: [trigger('openClose', [
-    // ...
-    state('open', style({
-      height: '0px',
-      opacity: 1,
-    })),
-    state('closed', style({
-      height: '0px',
-      opacity: 0,
-      backgroundColor: 'green'
-    })),
-    transition('open => closed', [
-      animate('0.2s')
-    ]),
-    transition('closed => open', [
-      animate('0.1s')
-    ]),
-  ]),
-],
+  providers: [MarvelService]
 })
 
 export class QuadroComponent implements OnInit {
