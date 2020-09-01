@@ -1,4 +1,4 @@
-# JogoDaVelha
+# Jogo Da Velha
 
 Ese projeto foi criado com [Angular CLI](https://github.com/angular/angular-cli) versão 10.0.8.
 
